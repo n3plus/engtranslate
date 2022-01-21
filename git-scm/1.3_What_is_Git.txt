@@ -1,0 +1,85 @@
+1.3 Getting Started - What is Git?
+Git이란 무엇인가?
+
+So What is git in nutshell?
+그렇다면 Git은 간단히 말해서 무엇입니까?
+
+This is an important section to absorb, because if you understand what 
+Git is and the fundamentals of how it works, 
+then using Git effectively will probably be much easier for you.
+Git이 무엇인지 그리고 어떻게 작동하는지에 대한 기본 사항을 이해한다면 
+Git을 효과적으로 사용하는 것이 훨씬 더 쉬울 것이기 때문에 
+이것은 흡수해야할 중요한 섹션입니다. 
+
+try to clear your mind of the things you may know about other VCSs,
+such as CVS, Subversion or perforce - 
+doing so will help you avoid subtie confusion when using the tool.
+Git을 배울때 CVS, Subversion 또는 Perforce와
+같은 다른 VCSㅇㅔ 대해 알고 있을수 있는 것들에 대한 마음을 비우십시오, 
+그렇게 하면 도구를 사용할때 미묘한 혼라을 피하는데 도움이 됩니다.
+
+Even though Git's user interface is fairly similar to these other VCSs,
+Git stores and thinks about information in a very different way,
+and understanding these differences will help you avoid becoming confused 
+while using it.
+Git의 사용자 인터페이스는 이러한 다른 VCS와 상ㅌ당히 유사하지만 Git은 
+정보를 저장하고 생각하는 방식이 매우 다르므로 , 
+이러한 차이점을 이해하면 사용하는동안 혼동을 피하는데 도움이 됩니다.  
+
+Snapshots, Not Differences
+차이가 아닌 스냅샷
+
+The major difference between Git and any other VCS
+(Subversion and friends included) is the way Git thinks about its data.
+Git과 다른 VCS의 주요 차이점은 Git이 데이터에 대해 생각하는 방식입니다. 
+
+Conceptually, most other systems store information as a list of file-based changes.
+개념적으로 대부분의 다른 시스템은 정보를 파일 기반 변경 목록으로 저장합니다. 
+
+These other systems (CVS, Subversion, Perforce, Bazaar, and so on)
+think of the information they store as a set of files and the changes made to 
+each file over time(this is commonly described as delta-based version control)
+이러한 다른 시스템(.. 뭐 등)은 저장하는 정보를 일련의 파일로 생각하고,
+시간이 지남에 따라 각 파일에 적용된 변경사항을 생각합니다. 
+(이를 일반적으로 델타 기반 버전 제어라고함)
+
+Figure 4. Storing data as changes to a base version of each file
+그림 4. 각 파일의 기본 버전에 대한 변경사항으로 데이터 저장
+
+Git doesn't think of or store its data this way.
+깃은 이런 식으로 데이터를 생각하거나 저장하지 않습니다. 
+
+instead, Git thinks of its data more like a series of snapshots or a miniature file system. 
+대신, 깃은 데이터를 미니어처 파일 시스템의 일련의 스냅샷처럼 생각합니다. 
+
+With Git, every time you commit, or save the state of your project, 
+Git basically takes a picture of what all your files look like a that moment 
+and stores a reference to that snapshot.
+깃을 사용하면 프로젝트 상태를 커밋하거나 저장할때마다 
+깃은 기본적으로 그순간에모든 파일이 어떻게 보이는지 사진을 찍고 
+해당 스냅샷에 대한 참조를 저장합니다.
+
+To be efficient, if files have not changed, Git doesn't stores the file again, 
+just a link to the pervious identical file it has already stored.
+효율성을 위해 파일이 변경되지 않은 경우 git은 파일을 다시 저장하지 않고, 
+이미 저장한 ㄷ이전 동일한 파일에 대한 링크만 저장합니다. 
+
+Git thinks about its data more like a stream of snapshots.
+깃은 데이터를 스냅샷 스트림과 유사하게 생각합니다. 
+
+Figure 5. Storing data as snapshots of the project over time
+시간 경과에 따른 프로젝트의 스냅샷으로 데이터 저장
+
+This is an important distinction between Git and nearly all other VCSs.
+이것은 깃과 거의 모든 다른 VCS간의 차이점입니다. 
+
+it makes git reconsider almost every aspect of version control that most other systems copied from the previous generation.
+깃은 대부분의 다른 시스템이 이전세대에서 복사한 버전 제어의 거의 모든 측면을 재고하게 합니다.
+
+This makes Git more like a mini file system with some incredibly powerful tools built on top of it, 
+rather than simply a VCS.
+이로인해 Git은 단순한 VCS가 아니라 그 위에 구축된 믿을수 없을 정도로 강력한 도구가 있는 미니 파일시스템에 더 가깝습니다.
+
+We'll explore some of the benefits you gain by thinking of your data this way when we cover Git branching in Git Branching.
+깃 분기에서 분기를 다룰때 이러한 방식으로 데이터를 생각함으로써 얻을수 있는 몇가지 이점을 살펴보겠습니다. 
+
