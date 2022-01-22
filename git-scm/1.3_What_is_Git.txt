@@ -83,3 +83,47 @@ rather than simply a VCS.
 We'll explore some of the benefits you gain by thinking of your data this way when we cover Git branching in Git Branching.
 깃 분기에서 분기를 다룰때 이러한 방식으로 데이터를 생각함으로써 얻을수 있는 몇가지 이점을 살펴보겠습니다. 
 
+Nearly Every operation is Local
+거의 모든 작업이 로컬에서 이루어 집니다. 
+
+Most opertaions in Git need only local files and resources to operate -- generally no informattion is needed from another computer on your network. 
+깃의 대부분의 작업은 로컬 파일과 리소스만 있으면 작동합니다. 일반적으로 네트워크의 다른 컴퓨터에서는 정보가 필요하지 않습니다. 
+
+If you're used to a CVCS where most operations have that network latency overhaed, 
+this aspect of Git will make you think that the gods of speed have blessed git whith unworldly powers.
+대부분의 작업에 네트워크 대기 시가 ㄴ오버헤드가 있는 CVCSㅇㅔ 익숙하다면 Git의 이측면을 보면 속도의 신이 깃에 엄청난 힘을 주었다고 생각할수 있습니다. 
+
+Because you have the entire history of the project right there on you local disk, most opertaions seem almost instantaneus.
+로컬 디스크에 프로젝트의 전체 기록이 있기 때문에 대부분의 작업이 거의 즉각적으로 보입니다. 
+
+For example, to browse the history of the project, Git doesn't need to go out to the server to get the history and display it for you 
+예를 들어, 프로젝트의 히스토리를 검색하기 위해 Git은 히스토리를 가져와 표시하기 이해 서버에 나갈 필요가 없습니다. 
+
+it simply reads it directly from you local database. 
+단순히 로컬 데이터베이스에서 직접 읽기만 하면 됩니다. 
+
+This means you see the project history almost instantly.
+즉, 프로젝트 기록을 거의 즉시 볼수 있습니다. 
+
+If you want to see the changes introduced betwee the current version of a file and the file a month ago, Git can look up the file a month ago and do a local difference calculation,
+instead of having to either ask a remote server to do it or pull an older version of the file from the remote server to do it locally 
+파일의 현재 버전과 한달전 파일 사이에 도입된 변경사항을 확인하려는 경우, 깃은 원격서버에 요청하지 않고 한달전에 파일을 조회하고 로컬 차이 계산을 수행할수 있습니다. 
+또는 원격 서버에서 파일의 이전 버전을 가져와 로컬에서 수행합니다. 
+
+This also means that there is very little you can't do if you're offline or off VPN.
+이것은 또한 오프라인 상태이거나 VPN을 사용하지 않는 경우 할수 없는 일이 거의 없음을 의미합니다. 
+
+If you get on an airplane or a train and want to do a little work, you can commit happily (to your local copy, remember?) until you get to a network connection to upload.
+당신은 비행기나 기차를 타고 약간의 작업을 수행하려는 경우 당신은 업로드 네트워크연결에 도달할때까지
+
+If you go home and can't get your VPN client working properly, you can still work. 
+집에가서 VPN클라이언트가 제대로 ㄷ작동하지 않는 경우에도 계속 작업할수 있습니다.
+
+in many other systems, doing so is either impossible or painful. in perforce, for example,, you can't do much when you aren't connected the server; in subversion and CVS, you can edit files,
+but you can't commit changes to you database (because your database is offline).
+다른 많은 시스템에서는 그렇게 하는 것이 불가능한거나 고통스럽습니다. 예를 들어 Perforce에서는 서버에 연결되어 있지 않으면 많은 작업을 수행할수 없습니다. Subversion과 CVS에서는 파일을 편집할수 있지만,
+데이터베이스에 변경사항을 커밋할수 없습니다. (데이터베이스가 오프라인이기 때문에)
+
+This many not seem like a huge deal, but you may be surprised what a bit difference it can make.
+이것은 큰 거래처럼 보이지 않을 수도 있지만, 이것이 얼마나 큰차이를 만들수 있는지 놀랄수 있습니다. 
+
