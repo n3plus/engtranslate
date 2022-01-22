@@ -1,0 +1,30 @@
+CSS Selectors
+CSS 선택기 
+
+A CSS selector selects the HTML element(s) you want to style. 
+CSS 선택기는 스타일을 지정할 HTML 요소를 선택합니다. 
+
+CSS selector 
+CSS selectors are used to "find" (or select) the HTML elements you want to style.
+CSS 선택기는 스타일을 지정하려는 HTML 요소를 "찾거나" 선택하는데 사용됩니다. 
+
+We can divide CSS seletors into file categories
+CSS 선택기를 5가지 범주로 나눌수 있습니다. 
+
+Simple selectors (select elements based on name, id , class)
+단순 선택기(이름, 아이디, 클래스를 기반으로 요소 선택) 
+
+Cominator selectors (select elements based on a specific relationship betwen them)
+결합자 선택기(요소 간의 특정 관계를 기반으로 요소 선택)
+
+Pseudo-class selectors (select elemtns base on a certain state)
+유사 클래스 선택기 (특정 상태를 기반으로 요소 선택)
+
+Pseodu-elements selectors (select and style a part of an element)
+유사 요소 선택기(요소의 일부를 선택하고 스타일 지정)
+
+Attribute selectors (select elemtns base on an attribute or attribute value)
+속성 선택기(속성 또는 속성 값을 기반으로 요소 선택)
+
+This page will explain the most basic CSS selectors.
+이 페이지에서는 가장 기본적인 CSS 선택기에 대해 설명합니다. 

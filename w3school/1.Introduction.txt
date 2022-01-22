@@ -1,0 +1,71 @@
+CSS Introduction.
+CSS 소개 
+
+CSS is the language we use to style a Web page.
+CSS는 웹 페이지의 스타일을 지정하는데 사용하는 언어입니다. 
+
+What is CSS?
+CSS stands for Cascading Style Sheets
+CSS는 cascading style sheets의 약자입니다. 
+
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS는 HTML 요소가 화면, 종이 또는 기타 미디어에 표시되는 방식을 설명합니다. 
+
+CSS saves a lot of work. It can control the layout of multiple web pages all at once.
+CSS는 많은 작업을 절약합니다. 한번에 여러 웹 페이지의 레이아웃을 제어할수 있습니다. 
+
+Why use CSS?
+CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+CSS는 다양한 장치 및 화면 크기에 대한 디스플레이의 디자인, 레이아웃 및 변형을 포함하여 웹 페이지의 스타일을 정의 하는데 사용됩니다. 
+
+{{cdoe}
+body {
+  background-color : lightblue;
+}
+
+hi {
+  color: white;
+  text-align:center;
+}
+
+p{
+  font-family:verdana;
+  font-size: 20px;
+}
+}
+
+CSS Solved a Big Problem
+CSS는 큰문제를 해결했습니다. 
+
+HTML was NEVER intended to contain tags for formatting a web page!
+HTML은 웹 페이지 서식을 지정하기 위한 태그를 포함하도록 의도된 적이 없습니다. 
+
+HTML was created to describe the content of a web page, like:
+다음과 같이 웹페이지의 내용을 설명하기 위해 만들어졌습니다. 
+
+<hi>this is heading</h1>
+이것은 제목입니다. 
+<p>this is a paragraph.</>
+이것은 단락입니다. 
+
+when tags like <font>, and color attributes were added to the HTML 3.2 specification, It started a nightmare for web developers.
+<font>와 같은 태그와 색상속성이 HTML3.2사양에 추가되었을때 웹개발자에게 악몽이 시작되었습니다. 
+
+Development of large websites, where fonts and color information were added to every single page, became a log and expensive process.
+모든 단일 페이지에 글꼴과 색상 정보가 추가되는 대형 웹사이트 개발은 길고 비용이 많이 드는 과정이 되었습니다. 
+
+To solve this problem, the world wide web consortiom(W3C) created CSS.
+이문제를 해결하기 위해 W3C에서 CSS를 만들었습니다. 
+
+CSS removed the style formatting form the HTML page!
+CSS가 HTML 페이지에서 스타일 서식을 제거했습니다!
+
+CSS saves a lot of work!
+CSS는 많은 작업을 절약합니다. 
+
+the style definitions are normally saved in external .css files. 
+스타일 정의는 일반적으로 외부 .css 파일에 저장됩니다. 
+
+with an external stylesheet file, you can change the look of an entire website by changing just one file!
+외부 스타일시트 파일을 사용하면 파일 하나만 변경하여 전체 웹사이트의 모양을 변경할수 있습니다. 
+
