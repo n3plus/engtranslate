@@ -1,30 +1,310 @@
 CSS Selectors
-CSS 선택기 
+CSS 선택기
 
-A CSS selector selects the HTML element(s) you want to style. 
-CSS 선택기는 스타일을 지정할 HTML 요소를 선택합니다. 
+A CSS selector selects the HTML element(s) you want to style.
+CSS 선택기는 스타일을 지정할 HTML 요소를 선택합니다.
 
-CSS selector 
+CSS selector
 CSS selectors are used to "find" (or select) the HTML elements you want to style.
-CSS 선택기는 스타일을 지정하려는 HTML 요소를 "찾거나" 선택하는데 사용됩니다. 
+CSS 선택기는 스타일을 지정하려는 HTML 요소를 "찾거나" 선택하는데 사용됩니다.
 
-We can divide CSS seletors into file categories
-CSS 선택기를 5가지 범주로 나눌수 있습니다. 
+We can divide CSS selectors into file categories
+CSS 선택기를 5가지 범주로 나눌수 있습니다.
 
 Simple selectors (select elements based on name, id , class)
-단순 선택기(이름, 아이디, 클래스를 기반으로 요소 선택) 
+단순 선택기(이름, 아이디, 클래스를 기반으로 요소 선택)
 
-Cominator selectors (select elements based on a specific relationship betwen them)
+Combinator selectors (select elements based on a specific relationship between them)
 결합자 선택기(요소 간의 특정 관계를 기반으로 요소 선택)
 
-Pseudo-class selectors (select elemtns base on a certain state)
+Pseudo-class selectors (select elements base on a certain state)
 유사 클래스 선택기 (특정 상태를 기반으로 요소 선택)
 
-Pseodu-elements selectors (select and style a part of an element)
-유사 요소 선택기(요소의 일부를 선택하고 스타일 지정)
+Pseudo-elements selectors (select and style a part of an element)
+유사 요소 선택기(요소� 일부를 선택하고 스타일 지정)
 
-Attribute selectors (select elemtns base on an attribute or attribute value)
+Attribute selectors (select elements base on an attribute or attribute value)
 속성 선택기(속성 또는 속성 값을 기반으로 요소 선택)
 
 This page will explain the most basic CSS selectors.
-이 페이지에서는 가장 기본적인 CSS 선택기에 대해 설명합니다. 
+이 페이지에서는 가장 기본적인 CSS 선택기에 대해 설명합니다.
+
+The CSS element Selector
+
+CSS 요소 선택기
+
+the element selector selects HTML elements based on the element name. 
+
+요서 선택기는 요소 이름을 기반으로 HTML요소를 선택합니다.
+
+Here, all <p> elements on the page will be center-aligned, with a red text color
+
+여기에서 페이지의 모든 <p> 요소는 빨간색 텍스트 색상으로 가운데 정렬됩니다.
+
+p { 
+
+text-align: center;
+
+color:red;
+
+}
+
+The CSS id Selector
+
+CSS ID 선택기
+
+This id selector uses the id attribute of an HTML elements of select a specific element.
+
+id 선택기는 HTML 요소의 ID 속성을 사용하여 특정요소를 선택합니다. 
+
+This id of an element is unique within a page, so the id selector is used to select one unique element!
+
+요소의 ID는 페이지 내에서 고유하므로 ID선택기를 사용하여 하나의 고유한 요소를 선택합니다. 
+
+To select an element with a specific id, write a hash (#) character, followed by the id of the element. 
+
+특정 ID를 가진 요소를 선택하려면 해시(#) 문자와 요소 ID를 차례로 작성합니다. 
+
+#para1 {
+
+text-align: center;
+
+color: red;
+
+}
+
+Note : an id name cannot start with a number!
+
+참고 :  ID 이름은 숫자로 시작할수 없습니다!
+
+The CSS universal Selector
+
+CSS 범용 선택기
+
+the universal selector (*) selects all HTML elements on the page.
+
+범용 선택기(*)는 페이지의 모든  HTML요소를 선택합니다. 
+
+The CSS rule below will affect every HTML element on the page
+
+아래 CSS 규칙은 페이지의 모든 HTML 요소에 영향을 미칩니다. 
+
+* {
+
+text-align: center;
+
+color: blue;
+
+}
+
+The CSS Grouping Selector
+
+CSS 그룹화 선택기
+
+The grouping selector selects all the HTML elemetns with the same style definitions.
+
+그룹화 선택기는 스타일 정의가 동일한 모든 HTML 요소를 선택합니다. 
+
+Look at the following CSS code (the h1, h2, and p elements have the same style definitions)
+
+다음 CSS 코드를 보십시오(h1, h2 및 p 요소는 동일한 스타일 정의를 가짐)
+
+h1 {
+
+text-align: center;
+
+color: red;
+
+}
+
+h2 {
+
+text-align: center;
+
+color: red;
+
+}
+
+p {
+
+text-align: center;
+
+color: red;
+
+}
+
+It will be better to group the selectors, to minimize the code.
+
+코드를 최소화하려면 선택기를 그룹화 하는 것이 좋습니다. 
+
+To group selectors, separate each selector with a comma.
+
+선택기를 그룹화 하려면 각 선태기를 숨표로 구분하십시오.CSS Selectors
+CSS 선택기
+
+A CSS selector selects the HTML element(s) you want to style.
+CSS 선택기는 스타일을 지정할 HTML 요소를 선택합니다.
+
+CSS selector
+CSS selectors are used to "find" (or select) the HTML elements you want to style.
+CSS 선택기는 스타일을 지정하려는 HTML 요소를 "찾거나" 선택하는데 사용됩니다.
+
+We can divide CSS selectors into file categories
+CSS 선택기를 5가지 범주로 나눌수 있습니다.
+
+Simple selectors (select elements based on name, id , class)
+단순 선택기(이름, 아이디, 클래스를 기반으로 요소 선택)
+
+Combinator selectors (select elements based on a specific relationship between them)
+결합자 선택기(요소 간의 특정 관계를 기반으로 요소 선택)
+
+Pseudo-class selectors (select elements base on a certain state)
+유사 클래스 선택기 (특정 상태를 기반으로 요소 선택)
+
+Pseudo-elements selectors (select and style a part of an element)
+유사 요소 선택기(요소의 일부를 선택하고 스타일 지정)
+
+Attribute selectors (select elements base on an attribute or attribute value)
+속성 선택기(속성 또는 속성 값을 기반으로 요소 선택)
+
+This page will explain the most basic CSS selectors.
+이 페이지에서는 가장 기본적인 CSS 선택기에 대해 설명합니다.
+
+The CSS element Selector
+
+CSS 요소 선택기
+
+the element selector selects HTML elements based on the element name. 
+
+요서 선택기는 요소 이름을 기반으로 HTML요소를 선택합니다.
+
+Here, all <p> elements on the page will be center-aligned, with a red text color
+
+여기에서 페이지의 모든 <p> 요소는 빨간색 텍스트 색상으로 가운데 정렬됩니다.
+
+p { 
+
+text-align: center;
+
+color:red;
+
+}
+
+The CSS id Selector
+
+CSS ID 선택기
+
+This id selector uses the id attribute of an HTML elements of select a specific element.
+
+id 선택기는 HTML 요소의 ID 속성을 사용하여 특정요소를 선택합니다. 
+
+This id of an element is unique within a page, so the id selector is used to select one unique element!
+
+요소의 ID는 페이지 내에서 고유하므로 ID선택기를 사용하여 하나의 고유한 요소를 선택합니다. 
+
+To select an element with a specific id, write a hash (#) character, followed by the id of the element. 
+
+특정 ID를 가진 요소를 선택하려면 해시(#) 문자와 요소 ID를 차례로 작성합니다. 
+
+#para1 {
+
+text-align: center;
+
+color: red;
+
+}
+
+Note : an id name cannot start with a number!
+
+참고 :  ID 이름은 숫자로 시작할수 없습니다!
+
+The CSS universal Selector
+
+CSS 범용 선택기
+
+the universal selector (*) selects all HTML elements on the page.
+
+범용 선택기(*)는 페이지의 모든  HTML요소를 선택합니다. 
+
+The CSS rule below will affect every HTML element on the page
+
+아래 CSS 규칙은 페이지의 모든 HTML 요소에 영향을 미칩니다. 
+
+* {
+
+text-align: center;
+
+color: blue;
+
+}
+
+The CSS Grouping Selector
+
+CSS 그룹화 선택기
+
+The grouping selector selects all the HTML elemetns with the same style definitions.
+
+그룹화 선택기는 스타일 정의가 동일한 모든 HTML 요소를 선택합니다. 
+
+Look at the following CSS code (the h1, h2, and p elements have the same style definitions)
+
+다음 CSS 코드를 보십시오(h1, h2 및 p 요소는 동일한 스타일 정의를 가짐)
+
+h1 {
+
+text-align: center;
+
+color: red;
+
+}
+
+h2 {
+
+text-align: center;
+
+color: red;
+
+}
+
+p {
+
+text-align: center;
+
+color: red;
+
+}
+
+It will be better to group the selectors, to minimize the code.
+
+코드를 최소화하려면 선택기를 그룹화 하는 것이 좋습니다. 
+
+To group selectors, separate each selector with a comma.
+
+선택기를 그룹화 하려면 각 선태기를 숨표로 구분하십시오.
+
+In this example we have grouped the selectors form the code above
+
+이 예제에서는 위의 코드에서 선택자를 그룹화했습니다. 
+
+h1, h2, p {
+
+text-align: center;
+
+color: red;
+
+}
+
+#id                      #firstname     selects the element with id=”firstname”
+
+.class                  .intro          selects all elements with class=”intro”
+
+element.class            p.intro        selects only <p> elements with class=”intro”
+
+ *                         *            select all elements
+
+element                   p             select all <p> elements
+
+element, element        div, p          select all <div> elements and all <p> elements
+
+
+
