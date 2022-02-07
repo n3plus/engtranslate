@@ -1,0 +1,12 @@
+# 방화벽을 오픈한다. 80,443,8080
+sudo iptables -I INPUT 5 -i ens3 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -I INPUT 5 -i ens3 -p tcp --dport 443 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -I INPUT 5 -i ens3 -p tcp --dport 8080 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+# 초기화되는것을 방지해주기위해 패키지 설치
+sudo apt-get install iptables-persistent
+
+# 재부팅후 방화벽이 초기화 되는 현상을 방지하기위해
+sudo netfilter-persistent save
+sudo netfilter-persistent start
+
